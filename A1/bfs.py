@@ -18,14 +18,14 @@ from Puzzle8 import *
 def breadth_first_search(problem):
      queue =deque([])
      root=TreeNode(problem,problem.initial_state)
-     queue.append(root)   
-     while len(queue)>0:
+     queue.append(root) # push initial state in queue
+     while len(queue)>0: 
          next=queue.popleft()
-         if next.goalp():
-             del(queue)
-             return next.path()
+         if next.goalp(): # does the current state satisfy the goal condition? (defined by TreeNode)
+             del(queue) 
+             return next.path() # solution
          else:
-             new_nodes=next.generate_new_tree_nodes()
+             new_nodes=next.generate_new_tree_nodes() 
              for new_node in new_nodes:
                   queue.append(new_node)         
      print('No solution')

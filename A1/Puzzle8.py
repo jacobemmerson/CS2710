@@ -15,7 +15,7 @@ from collections import deque
 from random import *
 
 
-NO_MOVE =-1
+NO_MOVE = -1
 NULL = -1
 
 # definition of the Puzzle 8 problem
