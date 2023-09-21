@@ -13,8 +13,14 @@ This module includes:
 """
 from collections import deque
 from random import *
-from heuristic import h_function
 
+i = input("Which Heuristic Function [1, 2, 3]?: ")
+if i == '1':
+    from heuristic import h_function
+elif i == '2':
+    from heuristic1 import h_function
+else:
+    from heuristic2 import h_function
 
 NO_MOVE =-1
 NULL = -1
