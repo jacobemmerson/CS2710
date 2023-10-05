@@ -17,7 +17,7 @@ N_POP = 500 # population size
 NUM_GENERATIONS = 500 #number of generations to run
 MUTATION_PROB = 0.05 #probability of an individual being mutated
 CULLING_PERC = 0.05 #percentage of the least fit individuals to be removed
-ELITE_PERC = 0.05 #proportion of best individuals to carry over from one generation to the next
+ELITE_PERC = 0.25 #proportion of best individuals to carry over from one generation to the next
 OUT_DIR = 'fig/' #directory where to place the plots (it will be automatically created if not existent)
 
 #create output directory if not present
@@ -62,7 +62,7 @@ for curr_iter in range(NUM_GENERATIONS):
 
 best_solution = population.get_best_individual()
 print("Best solution found has cost [{:.2f}]\n{}".format(best_solution.fitness, best_solution.tour))
-print(f"\nPopulation Size = {len(population)}")
+print(f"Population Size = {len(population)}")
 
  #plot results
 import matplotlib.pyplot as plt
